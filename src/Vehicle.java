@@ -7,7 +7,7 @@ public class Vehicle {
     String[] seats;
 
     Vehicle(){
-
+        this("sedan", "lada", "white", 10);
     }
 
     Vehicle(String type, String model, String color, double price, String... seats){
@@ -32,7 +32,7 @@ public class Vehicle {
 
         System.out.println(car);
 
-        Vehicle sportCar = new Vehicle("sportcar", "audi", "black", 100.0, "sportSeat", "standarSeat");
-
+        Vehicle sportCar = new Vehicle("sportcar", "audi", "black", 100.0, "sportSeat", "standardSeat");
+        System.out.println(sportCar);
     }
 }
