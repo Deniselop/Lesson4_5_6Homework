@@ -30,7 +30,7 @@ public class Ex1 {
 
             for (int j = 0; j < 2; j++){
 
-                byte arr2 = mass
+                byte arr2 = mass[0][0][0];
 
                 for (int f = 0; f < 3; f++){
 
