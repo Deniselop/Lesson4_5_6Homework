@@ -3,12 +3,12 @@ package Lesson4;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static jdk.internal.org.jline.utils.Colors.s;
 
 public class Ex4 {
     public static void main(String[] args) {
 
-        int n = 0;
+        int n;
+        int evenNums = 0;
 
 
         Scanner in = new Scanner(System.in);
@@ -23,32 +23,30 @@ public class Ex4 {
 
 
             for (int i = 0; i < arr.length; i++) {
-                arr[i] = (int) (Math.random() * 20);
-               if (arr[i] % 2 == 0 && arr[i] != 0){
-                   String s = String.valueOf(arr[i]);
-               }else{
-
-               }
-
+                arr[i] = (int) (Math.random() * (n + 1));
+                if (arr[i] % 2 == 0) {
+                    evenNums++;
+                }
 
             }
 
-        }else{
+        } else {
             System.out.println("Ошибка! \nВведите размер массива от 5 до 10 включительно");
         }
+
         System.out.println(Arrays.toString(arr));
-        System.out.println(s);
 
+        int[] arr1 = new int[evenNums];
+        int index = 0;
 
+        for (int i = 0; i < n; i++) {
+            if (arr[i] % 2 == 0 && arr[i] != 0) {
+                arr1[index] = arr[i];
+                index++;
+            }
+        }
 
-
-
-
-
-
-
-
-
+        System.out.println(Arrays.toString(arr1));
 
 
     }
