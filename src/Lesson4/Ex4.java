@@ -22,7 +22,6 @@ public class Ex4 {
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = (int) (Math.random() * 20);
 
-
             }
 
         }else{
@@ -32,6 +31,11 @@ public class Ex4 {
 
 
 
-        int[] arr2 = new int[]
+
+
+
+
+
+
     }
 }
