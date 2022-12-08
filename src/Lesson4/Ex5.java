@@ -15,17 +15,15 @@ public class Ex5 {
         array[3] = "Вася";
         array[4] = "Антон";
 
+        System.out.println(Arrays.toString(array));
+
         for (int i = 0; i < array.length; i++ ) {
 
             if (i != 0 && i % 2 !=0) {
                 array[i] = "null";
-            } else {
-
             }
 
-            System.out.println(Arrays.toString(array));
-
-
         }
+        System.out.println(Arrays.toString(array));
     }
 }
