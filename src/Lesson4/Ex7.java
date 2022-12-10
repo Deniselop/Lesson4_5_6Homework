@@ -17,19 +17,27 @@ public class Ex7 {
             array[i] = in.nextInt();
         }
 
+        System.out.println(Arrays.toString(array));
+
         boolean isSorted = false;
         int buf;
 
-        while (!isSorted){
+        while (!isSorted) {
             isSorted = true;
-            for (int i = 0; i < array.length-1; i++){
-                if (array[i] > array[i + 1]){
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array[i + 1]) {
                     isSorted = false;
+
+                    buf = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = buf;
+
+
                 }
             }
 
 
-
         }
+        System.out.println(Arrays.toString(array));
     }
 }
