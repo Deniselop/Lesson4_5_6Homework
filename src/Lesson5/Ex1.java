@@ -1,11 +1,10 @@
 package Lesson5;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Ex1 {
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
 
         byte[][][] mass = new byte[2][2][3];
 
@@ -22,24 +21,17 @@ public class Ex1 {
         mass[1][1][1] = 11;
         mass[1][1][2] = 12;
 
-        int n = in.nextInt();
 
-        for (int i = 0; i < 2; i++){
 
-            byte arr1 = mass[1 + n][0][0];
-
-            for (int j = 0; j < 2; j++){
-
-                byte arr2 = mass[0][0][0];
-
-                for (int f = 0; f < 3; f++){
-
-                    System.out.println(mass[i][j][f]);
+        for (int i = 0; i < mass.length; i++){
+            for (int k = 0; k < mass[i].length; k++){
+                for (int f = 0; f < mass[i][k].length; f++){
+                    mass[i][k][f] += 1;
                 }
             }
-
-
         }
+
+        System.out.println(Arrays.deepToString(mass));
 
     }
 }
