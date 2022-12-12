@@ -11,15 +11,14 @@ public class CreditCard {
     double AmountInBankAccount;
 
 
-    private ArrayList<String> availableBankNumbers = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
 
 
-    public CreditCard(double sum) {
+
+    public CreditCard(double sum, ArrayList<String> availableBankNumbers) {
 
         this.AmountInBankAccount = sum;
         this.NumberBankAccount = availableBankNumbers.get(0);
         availableBankNumbers.remove(0);
-
 
 
     }
@@ -48,14 +47,15 @@ public class CreditCard {
 
     public static void main(String[] args) {
 
+        ArrayList<String> availableBankNumbers = new ArrayList<>(Arrays.asList("1", "2", "3", "4"));
 
         Scanner in = new Scanner(System.in);
 
         System.out.println("Введите начальную сумму для 3-х карточек: \n");
 
-        CreditCard Denis = new CreditCard(in.nextDouble());
-        CreditCard Dima = new CreditCard(in.nextDouble());
-        CreditCard Anya = new CreditCard(in.nextDouble());
+        CreditCard Denis = new CreditCard(in.nextDouble(), availableBankNumbers);
+        CreditCard Dima = new CreditCard(in.nextDouble(), availableBankNumbers);
+        CreditCard Anya = new CreditCard(in.nextDouble(), availableBankNumbers);
 
         System.out.println("Введите сумму на которую хотите пополнить карточку");
         Denis.setMoney(in.nextDouble());
@@ -66,7 +66,7 @@ public class CreditCard {
         System.out.println("Введите сумму которую хотите снять с карточки: \n");
         Anya.setWithdrawalMoney(in.nextDouble());
 
-        System.out.println("\nНомер счёта и сумма: \n" );
+        System.out.println("\nНомер счёта и сумма: \n");
         Denis.infoOfBankAccount();
 
         System.out.println("\nНомер счёта и сумма: \n");
